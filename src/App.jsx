@@ -1,8 +1,8 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
 import Auth from './layouts/Auth'
-import LoginPage from './pages/login.page'
-import Regsiter from './pages/register.page'
+import LoginPage from './pages/login'
+import Regsiter from './pages/register'
 
 function App() {
   const _route = createBrowserRouter(
