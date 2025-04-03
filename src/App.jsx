@@ -5,7 +5,7 @@ import LoginPage from './pages/login.page'
 import Regsiter from './pages/register.page'
 
 function App() {
-  const route = createBrowserRouter(
+  const _route = createBrowserRouter(
     [
       {
         path: "/auth",
@@ -25,7 +25,7 @@ function App() {
       { path: "*", element: <div>404 page not found it seems you are lost</div> },
     ]
   )
-  return <RouterProvider router={route}></RouterProvider>
+  return <RouterProvider router={_route} />
 }
 
 export default App
