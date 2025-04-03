@@ -5,20 +5,26 @@ import LoginPage from './pages/login.page'
 import Regsiter from './pages/register.page'
 
 function App() {
-  const route = createBrowserRouter([{
-    path: "/auth",
-    element: <Auth />,
-    children: [
+  const route = createBrowserRouter(
+    [
       {
-        path: "login",
-        element: <LoginPage />
+        path: "/auth",
+        element: <Auth />,
+        children: [
+          {
+            path: "login",
+            element: <LoginPage />
+          },
+          {
+            path: "register",
+            element: <Regsiter />
+          },
+        ]
       },
-      {
-        path: "register",
-        element: <Regsiter />
-      },
+      { path: "", element: <div>Hello world</div> },
+      { path: "*", element: <div>404 page not found it seems you are lost</div> },
     ]
-  }])
+  )
   return <RouterProvider router={route}></RouterProvider>
 }
 
