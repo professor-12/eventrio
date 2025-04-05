@@ -35,6 +35,7 @@ const EventRegister = () => {
                                     <textarea rows={"4"} minLength={""} className="border field-sizing-fixed focus:outline-none  border-[#9B4DFF] p-1.5 rounded-lg w-full" />
                               </label>
                         </div>
+                        <button className="bg-[#9B4DFF] w-full">Create Event</button>
                   </form>
             </div>
       )
