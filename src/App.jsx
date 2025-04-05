@@ -3,6 +3,8 @@ import './App.css'
 import Auth from './layouts/Auth'
 import LoginPage from './pages/login'
 import Regsiter from './pages/register'
+import Events from './layouts/events'
+import EventRegister from './components/EventRegister'
 
 function App() {
   const _route = createBrowserRouter(
@@ -19,6 +21,16 @@ function App() {
             path: "register",
             element: <Regsiter />
           },
+        ]
+      },
+      {
+        path: "/events",
+        element: <Events />,
+        children: [
+          {
+            path: "create",
+            element: <EventRegister />
+          }
         ]
       },
       { path: "", element: <div>Hello world</div> },
